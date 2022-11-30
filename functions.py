@@ -19,3 +19,9 @@ def timer(func):
         print(f"Finished {func.__name__!r} in {run_time} seconds.")
         return value
     return wrapper_timer
+
+
+def lines(filename):
+    with open(filename, "r") as file_in:
+        out = [line for line in file_in.read().split("\n")]
+    return out
